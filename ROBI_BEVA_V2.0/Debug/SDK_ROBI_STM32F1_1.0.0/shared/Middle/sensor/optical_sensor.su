@@ -1,0 +1,7 @@
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:54:1:OpticalSensor_Init	88	static
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:147:1:OpticalSensor_MeasureUseDMAMode	16	static
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:162:1:OpticalSensor_MeasureUsePollingMode	24	static
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:208:1:OpticalSensor_SendPacketRespond	32	static
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:230:6:SamplingWhite	32	static
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:252:6:SamplingBlack	32	static
+D:/DH/Lumi/ROBIV2/SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.c:274:6:Calculate_AdcThreshold	16	static

@@ -1,0 +1,14 @@
+../Src/main.c:101:5:main	1
+../Src/main.c:138:6:AppInitCommon	1
+../Src/main.c:191:1:LoadConfiguration	1
+../Src/main.c:203:6:AppStateManager	6
+../Src/main.c:236:6:SetStateApp	1
+../Src/main.c:250:13:GetStateApp	1
+../Src/main.c:262:1:DeviceStateMachine	6
+../Src/main.c:307:6:SetLed_Red	1
+../Src/main.c:318:6:SetLed_Green	1
+../Src/main.c:329:6:SetLed_Blue	1
+../Src/main.c:340:6:BlinkLed	4
+../Src/main.c:382:10:CalculatorTime	2
+../Src/main.c:403:6:delay_mls	2
+../Src/main.c:411:6:LineFollow_Process	3
