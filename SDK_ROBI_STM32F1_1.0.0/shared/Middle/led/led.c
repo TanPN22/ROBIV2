@@ -154,6 +154,24 @@ LedControl_SetColorGeneral(
         	LedControl_SetColorIndividual(led_id, LED_COLOR_GREEN, 0);
             break;
 
+        case LED_COLOR_YELLOW:
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_BLUE, 0);
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_RED, led_level);
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_GREEN, led_level);
+        	break;
+
+        case LED_COLOR_PINK:
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_BLUE, led_level);
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_RED, led_level);
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_GREEN, 0);
+        	break;
+
+        case LED_COLOR_CYAN:
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_BLUE, led_level);
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_RED, 0);
+        	LedControl_SetColorIndividual(led_id, LED_COLOR_GREEN, led_level);
+        	break;
+
         case LED_COLOR_WHITE:
         	LedControl_SetColorIndividual(led_id, LED_COLOR_BLUE, led_level);
         	LedControl_SetColorIndividual(led_id, LED_COLOR_RED, led_level);

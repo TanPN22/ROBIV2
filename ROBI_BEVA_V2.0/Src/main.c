@@ -88,33 +88,35 @@ void BlinkLed(void);
 uint32_t CalculatorTime(uint32_t dwTimeInit, uint32_t dwTimeCurrent);
 void delay_mls(uint32_t milisecond);
 static void LineFollow_Process(void);
+void Toggle_Led();
 
 void PrintfDebug(void *arg);
 
+uint8_t ledBuff = 1;
+int timebuff = 0;
 /******************************************************************************/
 /*                            EXPORTED FUNCTIONS                              */
 /******************************************************************************/
 
-int timeBuffer = 0;
-int ADC_Read[5];
-int chothang = 0;
 int main(void)
 {
     // Initialize modules
     AppInitCommon();
 //    SetStateApp(STATE_APP_STARTUP);
 //    EventSchedulerAdd(EVENT_APP_INIT);
-
     while (1)
     {
         /* Process tasks */
 //        processTimerScheduler();
 //        processEventScheduler();
-    		LineFollow_Process();
-
+    	if (GetMilSecTick() - timebuff > 500){
+    		Toggle_Led();
+    		timebuff = GetMilSecTick();
+    	}
+    	LineFollow_Process();
 //        DEBUG_Print("Cho thang SHIBAL: %d\n",chothang);
 //        chothang++;
-//        delay_ms(100);
+//        delay_ms(1000);
 //        LedControl_SetColorGeneral(LED_KIT_ID, LED_COLOR_RED, 100);
 //        BuzzerControl_SetMelody(pbeep);
 //        GPIO_SetBits(GPIOB, GPIO_Pin_11);
@@ -407,9 +409,35 @@ void delay_mls(uint32_t milisecond)
 	while (CalculatorTime(startTime, GetMilSecTick()) <= milisecond);
 }
 
+void Toggle_Led(){
+	switch (ledBuff) {
+		case 1:
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_BLUE, 0);
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_RED, 100);
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_GREEN, 100);
+			ledBuff = 2;
+			break;
+		case 2:
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_BLUE, 100);
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_RED, 0);
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_GREEN, 100);
+			ledBuff = 3;
+			break;
+		case 3:
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_BLUE, 100);
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_RED, 100);
+        	LedControl_SetColorIndividual(LED_KIT_ID, LED_COLOR_GREEN, 0);
+			ledBuff = 1;
+			break;
+		default:
+			break;
+	}
+}
+
 static
 void LineFollow_Process(void)
 {
+
 	if (CalculatorTime(TimeStart, GetMilSecTick()) > 10) {
 		if(statePID == true) {
 			MotorControl_PID();

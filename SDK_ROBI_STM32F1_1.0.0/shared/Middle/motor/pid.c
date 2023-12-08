@@ -42,9 +42,9 @@ float PIDvalue = 0;
 float Kp = 0.0;
 float Ki = 0.0;
 float Kd = 0.0;
-int lfspeed = 30;
+int lfspeed = 35;
 int lsp, rsp;
-int lastCheckInline=0;
+int lastCheckInline,lastCheckInline2,lastCheckInline3;
 int count = 0;
 
 /******************************************************************************/
@@ -64,8 +64,10 @@ void LineFollow(void)
 		OpticalSensor_MeasureUseDMAMode(4) > AdcValuesThreshold[4])
     {
     	/* Turn left */
-		MotorControl_ForwardRotating(MOTOR_ID_R, 15);
-		MotorControl_ReverseRotating(MOTOR_ID_L, 20);
+		MotorControl_ForwardRotating(MOTOR_ID_R, 25);	// if max speed = 60
+		MotorControl_ReverseRotating(MOTOR_ID_L, 15);
+//		MotorControl_ForwardRotating(MOTOR_ID_R, 30);	// if max speed = 100
+//		MotorControl_ReverseRotating(MOTOR_ID_L, 15);
 
     }
 
@@ -74,17 +76,19 @@ void LineFollow(void)
     		 OpticalSensor_MeasureUseDMAMode(4) < AdcValuesThreshold[4])
     {
     	/* Turn right */
-		MotorControl_ReverseRotating(MOTOR_ID_R, 15);
-		MotorControl_ForwardRotating(MOTOR_ID_L, 20);
+		MotorControl_ReverseRotating(MOTOR_ID_R, 15);	// if max speed = 60
+		MotorControl_ForwardRotating(MOTOR_ID_L, 25);
+//		MotorControl_ReverseRotating(MOTOR_ID_R, 15);	// if max speed = 100
+//		MotorControl_ForwardRotating(MOTOR_ID_L, 30);
     }
 
     /* IR sensor is in the center position */
     else if (OpticalSensor_MeasureUseDMAMode(2) < AdcValuesThreshold[2])
     {
     	/* Calculate Kp, Ki, Kd used to Follow Line */
-		Kp = 0.00004 * (2000 - OpticalSensor_MeasureUseDMAMode(3));
-		Kd = 60 * Kp;
-//      Ki = 0.0000001;
+		Kp = 0.000085 * (1500 - OpticalSensor_MeasureUseDMAMode(2));
+		Kd = 0.0075 * (1500 - OpticalSensor_MeasureUseDMAMode(2));;
+		Ki = 0.000015;
 		PID_Control();
     }
 }
@@ -98,7 +102,7 @@ void LineFollow(void)
 void PID_Control(void)
 {
 	/* Calculate error */
-	int error = (OpticalSensor_MeasureUseDMAMode(1) - OpticalSensor_MeasureUseDMAMode(3));
+	int error = (OpticalSensor_MeasureUseDMAMode(1) - OpticalSensor_MeasureUseDMAMode(3))/8;
 
 	P =  error;
 	I += error;
@@ -110,13 +114,27 @@ void PID_Control(void)
 	lsp = lfspeed - PIDvalue;
 	rsp = lfspeed + PIDvalue;
 
-	if (lsp > 50) 	lsp = 50;
+//	if (PIDvalue < - 200 || PIDvalue > 200)
+//	{
+//		if (lsp > 60) 	lsp = 60;
+//
+//		if (lsp < 0) 	lsp = 0;
+//
+//		if (rsp > 60) 	rsp = 60;
+//
+//		if (rsp < 0) 	rsp = 0;
+//	} else
+//	{
+
+	if (lsp > 65) 	lsp = 65;
 
 	if (lsp < 0) 	lsp = 0;
 
-	if (rsp > 50) 	rsp = 50;
+	if (rsp > 65) 	rsp = 65;
 
 	if (rsp < 0) 	rsp = 0;
+
+//	}
 
 	MotorControl_ForwardRotating(MOTOR_ID_R, rsp);
 	MotorControl_ForwardRotating(MOTOR_ID_L, lsp);
@@ -144,7 +162,7 @@ uint8_t Check_InLine(void)
 		return 1;
 	}else if (count == -5){
 		count = 0;
-		return -1;
+		return 2;
 	}
 	else {
 		count = 0;
@@ -178,16 +196,16 @@ uint8_t Check_InLine(void)
 //}
 void MotorControl_PID(void)
 {
-	if (Check_InLine() == 1 && lastCheckInline == 1){
-		MotorControl_ReverseRotating(MOTOR_ID_L, 20);
-		MotorControl_ReverseRotating(MOTOR_ID_R, 20);
-		lastCheckInline = 1;
-	}else if (Check_InLine() == -1 && lastCheckInline == -1){
+	if (Check_InLine() == 1 && lastCheckInline == 1 && lastCheckInline2 == 1 && lastCheckInline3 == 1){
+//		MotorControl_ReverseRotating(MOTOR_ID_L, 20);
+//		MotorControl_ReverseRotating(MOTOR_ID_R, 20);
+	}else if (Check_InLine() == 2){
 		MotorControl_ForwardRotating(MOTOR_ID_L, 0);
 		MotorControl_ForwardRotating(MOTOR_ID_R, 0);
-		lastCheckInline = -1;
-	}
-	else {
+	}else {
 		LineFollow();
 	}
+	lastCheckInline3 = lastCheckInline2;
+	lastCheckInline2 = lastCheckInline;
+	lastCheckInline = Check_InLine();
 }

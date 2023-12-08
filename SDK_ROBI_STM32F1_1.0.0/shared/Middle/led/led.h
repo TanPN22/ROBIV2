@@ -58,7 +58,8 @@ typedef enum __led_color__ {
 	LED_COLOR_WHITE = 0x03u,
 	LED_COLOR_BLACK = 0x04u,
 	LED_COLOR_YELLOW = 0x05u,
-	LED_COLOR_PINK = 0xFFC0CBu
+	LED_COLOR_PINK = 0x06u,
+	LED_COLOR_CYAN = 0x07u,
 } led_color_t;
 
 /*! @brief Led level */

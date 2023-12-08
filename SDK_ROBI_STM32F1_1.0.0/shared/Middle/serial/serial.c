@@ -50,6 +50,7 @@ static uint8_t byIndexRxBuf;
 static uint8_t byCheckXorRxBuf;
 static uint32_t dwTimeoutRx;
 static uint8_t bRxActive = 0;
+uint16_t byReceiverData;
 
 uint8_t byRxBuffer[RX_BUFFER_SIZE] = {0};
 
@@ -112,7 +113,7 @@ Serial_Init(void) {
 	UART_RegBufferRx(USART1_IDX, &serialQueueRx);
 
     /* Initializes UART */
-    UART_Init(USART1_IDX, BAUD57600, NO_PARITY, ONE_STOP_BIT);
+    UART_Init(USART1_IDX, BAUD9600, NO_PARITY, ONE_STOP_BIT);
 	byRxBufState = (uint8_t)RX_STATE_START_BYTE;
 }
 
@@ -426,14 +427,12 @@ UART_Init(
  */
 void
 USART1_IRQHandler(void) {
-	__disable_irq();
     if (USART_GetITStatus(USARTx_INSTANCE, USART_IT_RXNE) == SET) {
         buffqueue_p pUartBuffQueueRx = (buffqueue_p) g_pUartQueueRx[0];
-        uint8_t byReceiverData = USART_ReceiveData(USARTx_INSTANCE);
+        byReceiverData = USART_ReceiveData(USARTx_INSTANCE);
         if (bufEnDat(pUartBuffQueueRx, &byReceiverData) == ERR_BUF_FULL) {}
         USART_ClearITPendingBit(USARTx_INSTANCE, USART_IT_RXNE);
     }
-    __enable_irq();
 }
 
 /**

@@ -985,10 +985,6 @@ Discarded input sections
                 0x0000000000000000       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
  .text.GPIO_ReadOutputData
                 0x0000000000000000       0x18 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
- .text.GPIO_SetBits
-                0x0000000000000000       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
- .text.GPIO_ResetBits
-                0x0000000000000000       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
  .text.GPIO_WriteBit
                 0x0000000000000000       0x2e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
  .text.GPIO_Write
@@ -2078,12 +2074,8 @@ Discarded input sections
  .bss.ledBlink  0x0000000000000000        0x8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .data.blinkTimer
                 0x0000000000000000        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
- .bss.g_brightnessLed
-                0x0000000000000000        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
- .text.LedControl_SetColorIndividual
-                0x0000000000000000       0xb4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .text.LedControl_SetColorGeneral
-                0x0000000000000000       0xf8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+                0x0000000000000000      0x17c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .text.LedGetAllLastState
                 0x0000000000000000        0xc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .text.LedToggle
@@ -2091,7 +2083,7 @@ Discarded input sections
  .text.pFuncBlink
                 0x0000000000000000       0xb0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .text.BlinkStop
-                0x0000000000000000       0x7c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+                0x0000000000000000       0x78 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .rodata        0x0000000000000000        0x9 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .text.LedControl_BlinkStart
                 0x0000000000000000       0x7c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
@@ -2641,10 +2633,6 @@ Discarded input sections
                 0x0000000000000000        0x4 ./Src/main.o
  .bss.encoderR_speed
                 0x0000000000000000        0x4 ./Src/main.o
- .bss.timeBuffer
-                0x0000000000000000        0x4 ./Src/main.o
- .bss.ADC_Read  0x0000000000000000       0x14 ./Src/main.o
- .bss.chothang  0x0000000000000000        0x4 ./Src/main.o
  .text.SetLed_Red
                 0x0000000000000000       0x1a ./Src/main.o
  .text.SetLed_Green
@@ -3336,7 +3324,7 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000130                . = ALIGN (0x4)
 
-.text           0x0000000008000130     0x510c
+.text           0x0000000008000130     0x530c
                 0x0000000008000130                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000130       0x40 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -3479,450 +3467,460 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .text.GPIO_ReadInputDataBit
                 0x0000000008001b3c       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
                 0x0000000008001b3c                GPIO_ReadInputDataBit
- *fill*         0x0000000008001b6e        0x2 
+ .text.GPIO_SetBits
+                0x0000000008001b6e       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
+                0x0000000008001b6e                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x0000000008001b8a       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
+                0x0000000008001b8a                GPIO_ResetBits
+ *fill*         0x0000000008001ba6        0x2 
  .text.GPIO_PinRemapConfig
-                0x0000000008001b70       0xe0 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
-                0x0000000008001b70                GPIO_PinRemapConfig
+                0x0000000008001ba8       0xe0 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
+                0x0000000008001ba8                GPIO_PinRemapConfig
  .text.GPIO_EXTILineConfig
-                0x0000000008001c50       0x80 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
-                0x0000000008001c50                GPIO_EXTILineConfig
+                0x0000000008001c88       0x80 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
+                0x0000000008001c88                GPIO_EXTILineConfig
  .text.RCC_ADCCLKConfig
-                0x0000000008001cd0       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
-                0x0000000008001cd0                RCC_ADCCLKConfig
+                0x0000000008001d08       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0000000008001d08                RCC_ADCCLKConfig
  .text.RCC_GetClocksFreq
-                0x0000000008001d08      0x16c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
-                0x0000000008001d08                RCC_GetClocksFreq
+                0x0000000008001d40      0x16c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0000000008001d40                RCC_GetClocksFreq
  .text.RCC_AHBPeriphClockCmd
-                0x0000000008001e74       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
-                0x0000000008001e74                RCC_AHBPeriphClockCmd
+                0x0000000008001eac       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0000000008001eac                RCC_AHBPeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x0000000008001eb0       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
-                0x0000000008001eb0                RCC_APB2PeriphClockCmd
+                0x0000000008001ee8       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0000000008001ee8                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x0000000008001eec       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
-                0x0000000008001eec                RCC_APB1PeriphClockCmd
+                0x0000000008001f24       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0000000008001f24                RCC_APB1PeriphClockCmd
  .text.RCC_APB2PeriphResetCmd
-                0x0000000008001f28       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
-                0x0000000008001f28                RCC_APB2PeriphResetCmd
+                0x0000000008001f60       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0000000008001f60                RCC_APB2PeriphResetCmd
  .text.TIM_TimeBaseInit
-                0x0000000008001f64       0xf8 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008001f64                TIM_TimeBaseInit
+                0x0000000008001f9c       0xf8 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008001f9c                TIM_TimeBaseInit
  .text.TIM_OC1Init
-                0x000000000800205c      0x118 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x000000000800205c                TIM_OC1Init
+                0x0000000008002094      0x118 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008002094                TIM_OC1Init
  .text.TIM_OC2Init
-                0x0000000008002174      0x110 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002174                TIM_OC2Init
+                0x00000000080021ac      0x110 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x00000000080021ac                TIM_OC2Init
  .text.TIM_OC3Init
-                0x0000000008002284      0x10c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002284                TIM_OC3Init
+                0x00000000080022bc      0x10c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x00000000080022bc                TIM_OC3Init
  .text.TIM_OC4Init
-                0x0000000008002390       0xd0 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002390                TIM_OC4Init
- .text.TIM_Cmd  0x0000000008002460       0x3e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002460                TIM_Cmd
+                0x00000000080023c8       0xd0 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x00000000080023c8                TIM_OC4Init
+ .text.TIM_Cmd  0x0000000008002498       0x3e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008002498                TIM_Cmd
  .text.TIM_ARRPreloadConfig
-                0x000000000800249e       0x3e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x000000000800249e                TIM_ARRPreloadConfig
+                0x00000000080024d6       0x3e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x00000000080024d6                TIM_ARRPreloadConfig
  .text.TIM_OC1PreloadConfig
-                0x00000000080024dc       0x36 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x00000000080024dc                TIM_OC1PreloadConfig
+                0x0000000008002514       0x36 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008002514                TIM_OC1PreloadConfig
  .text.TIM_OC2PreloadConfig
-                0x0000000008002512       0x3a ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002512                TIM_OC2PreloadConfig
+                0x000000000800254a       0x3a ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x000000000800254a                TIM_OC2PreloadConfig
  .text.TIM_OC3PreloadConfig
-                0x000000000800254c       0x36 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x000000000800254c                TIM_OC3PreloadConfig
+                0x0000000008002584       0x36 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008002584                TIM_OC3PreloadConfig
  .text.TIM_OC4PreloadConfig
-                0x0000000008002582       0x3a ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002582                TIM_OC4PreloadConfig
+                0x00000000080025ba       0x3a ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x00000000080025ba                TIM_OC4PreloadConfig
  .text.TIM_SetCounter
-                0x00000000080025bc       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x00000000080025bc                TIM_SetCounter
- .text.TIM_SetCompare1
-                0x00000000080025d8       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x00000000080025d8                TIM_SetCompare1
- .text.TIM_SetCompare2
                 0x00000000080025f4       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x00000000080025f4                TIM_SetCompare2
- .text.TIM_SetCompare3
+                0x00000000080025f4                TIM_SetCounter
+ .text.TIM_SetCompare1
                 0x0000000008002610       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x0000000008002610                TIM_SetCompare3
+                0x0000000008002610                TIM_SetCompare1
+ .text.TIM_SetCompare2
+                0x000000000800262c       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x000000000800262c                TIM_SetCompare2
+ .text.TIM_SetCompare3
+                0x0000000008002648       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008002648                TIM_SetCompare3
  .text.TIM_SetCompare4
-                0x000000000800262c       0x1e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
-                0x000000000800262c                TIM_SetCompare4
- *fill*         0x000000000800264a        0x2 
+                0x0000000008002664       0x1e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0000000008002664                TIM_SetCompare4
+ *fill*         0x0000000008002682        0x2 
  .text.USART_Init
-                0x000000000800264c      0x174 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
-                0x000000000800264c                USART_Init
+                0x0000000008002684      0x174 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x0000000008002684                USART_Init
  .text.USART_Cmd
-                0x00000000080027c0       0x3e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
-                0x00000000080027c0                USART_Cmd
+                0x00000000080027f8       0x3e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x00000000080027f8                USART_Cmd
  .text.USART_ITConfig
-                0x00000000080027fe       0x8e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
-                0x00000000080027fe                USART_ITConfig
+                0x0000000008002836       0x8e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x0000000008002836                USART_ITConfig
  .text.USART_ReceiveData
-                0x000000000800288c       0x1e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
-                0x000000000800288c                USART_ReceiveData
+                0x00000000080028c4       0x1e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x00000000080028c4                USART_ReceiveData
  .text.USART_GetITStatus
-                0x00000000080028aa       0xb4 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
-                0x00000000080028aa                USART_GetITStatus
+                0x00000000080028e2       0xb4 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x00000000080028e2                USART_GetITStatus
  .text.USART_ClearITPendingBit
-                0x000000000800295e       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
-                0x000000000800295e                USART_ClearITPendingBit
- *fill*         0x0000000008002996        0x2 
+                0x0000000008002996       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x0000000008002996                USART_ClearITPendingBit
+ *fill*         0x00000000080029ce        0x2 
  .text.Button_Init
-                0x0000000008002998       0xc4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
-                0x0000000008002998                Button_Init
+                0x00000000080029d0       0xc4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
+                0x00000000080029d0                Button_Init
  .text.Button_RegisterEventCallback
-                0x0000000008002a5c       0x30 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
-                0x0000000008002a5c                Button_RegisterEventCallback
+                0x0000000008002a94       0x30 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
+                0x0000000008002a94                Button_RegisterEventCallback
  .text.ButtonScanTypeEdge
-                0x0000000008002a8c      0x208 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
+                0x0000000008002ac4      0x208 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
  .text.ButtonScanEventHandler
-                0x0000000008002c94       0x4c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
+                0x0000000008002ccc       0x4c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
  .text.BTNGPIO_Init
-                0x0000000008002ce0       0x34 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
+                0x0000000008002d18       0x34 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
  .text.EventButton_Init
-                0x0000000008002d14       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
-                0x0000000008002d14                EventButton_Init
+                0x0000000008002d4c       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
+                0x0000000008002d4c                EventButton_Init
  .text.ButtonProcessEventEdge
-                0x0000000008002d50       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
+                0x0000000008002d88       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
  .text.ButtonProcessEventPress
-                0x0000000008002d82       0x66 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
+                0x0000000008002dba       0x66 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
  .text.ButtonProcessEventHold
-                0x0000000008002de8       0x5e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
+                0x0000000008002e20       0x5e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
  .text.ButtonProcessEventRelease
-                0x0000000008002e46       0x5e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
+                0x0000000008002e7e       0x5e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
  .text.BuzzerControl_Init
-                0x0000000008002ea4       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
-                0x0000000008002ea4                BuzzerControl_Init
+                0x0000000008002edc       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
+                0x0000000008002edc                BuzzerControl_Init
  .text.BUZZTIM_InitTimer
-                0x0000000008002ec0       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
+                0x0000000008002ef8       0x3c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
  .text.BUZZTIM_InitPWMChannel
-                0x0000000008002efc       0x70 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
+                0x0000000008002f34       0x70 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
  .text.LedControl_Init
-                0x0000000008002f6c        0xc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
-                0x0000000008002f6c                LedControl_Init
+                0x0000000008002fa4        0xc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+                0x0000000008002fa4                LedControl_Init
+ .text.LedControl_SetColorIndividual
+                0x0000000008002fb0       0xb4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+                0x0000000008002fb0                LedControl_SetColorIndividual
  .text.LEDGPIO_Config
-                0x0000000008002f78       0x30 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+                0x0000000008003064       0x30 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .text.Encoder_Init
-                0x0000000008002fa8       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
-                0x0000000008002fa8                Encoder_Init
+                0x0000000008003094       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x0000000008003094                Encoder_Init
  .text.EncoderGPIO_Config
-                0x0000000008002fb8       0xa0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x00000000080030a4       0xa0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
  .text.binaryToDecimal
-                0x0000000008003058       0xc4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
-                0x0000000008003058                binaryToDecimal
+                0x0000000008003144       0xc4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x0000000008003144                binaryToDecimal
  .text.EXTI3_IRQHandler
-                0x000000000800311c       0x94 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
-                0x000000000800311c                EXTI3_IRQHandler
+                0x0000000008003208       0x94 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x0000000008003208                EXTI3_IRQHandler
  .text.EXTI9_5_IRQHandler
-                0x00000000080031b0       0x90 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
-                0x00000000080031b0                EXTI9_5_IRQHandler
+                0x000000000800329c       0x90 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x000000000800329c                EXTI9_5_IRQHandler
  .text.CalculateSpeed
-                0x0000000008003240       0xdc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x000000000800332c       0xdc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
  .text.ScanTimer
-                0x000000000800331c       0x48 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x0000000008003408       0x48 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
  .text.MotorControl_Init
-                0x0000000008003364        0xc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
-                0x0000000008003364                MotorControl_Init
+                0x0000000008003450        0xc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+                0x0000000008003450                MotorControl_Init
  .text.MOTOR_GPIO_Config
-                0x0000000008003370       0xd0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+                0x000000000800345c       0xd0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
  .text.MotorControl_ForwardRotating
-                0x0000000008003440       0x9c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
-                0x0000000008003440                MotorControl_ForwardRotating
+                0x000000000800352c       0x9c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+                0x000000000800352c                MotorControl_ForwardRotating
  .text.MotorControl_ReverseRotating
-                0x00000000080034dc       0x9c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
-                0x00000000080034dc                MotorControl_ReverseRotating
+                0x00000000080035c8       0x9c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+                0x00000000080035c8                MotorControl_ReverseRotating
+ *fill*         0x0000000008003664        0x4 
  .text.LineFollow
-                0x0000000008003578       0xe8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
-                0x0000000008003578                LineFollow
+                0x0000000008003668      0x11c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x0000000008003668                LineFollow
  .text.PID_Control
-                0x0000000008003660      0x17c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
-                0x0000000008003660                PID_Control
+                0x0000000008003784      0x184 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x0000000008003784                PID_Control
  .text.Check_InLine
-                0x00000000080037dc       0x84 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
-                0x00000000080037dc                Check_InLine
+                0x0000000008003908       0x84 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x0000000008003908                Check_InLine
  .text.MotorControl_PID
-                0x0000000008003860       0x40 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
-                0x0000000008003860                MotorControl_PID
+                0x000000000800398c       0x74 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x000000000800398c                MotorControl_PID
  .text.EventSchedulerInit
-                0x00000000080038a0       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
-                0x00000000080038a0                EventSchedulerInit
+                0x0000000008003a00       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+                0x0000000008003a00                EventSchedulerInit
  .text.EventSchedulerAdd
-                0x00000000080038d8       0x2c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
-                0x00000000080038d8                EventSchedulerAdd
+                0x0000000008003a38       0x2c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+                0x0000000008003a38                EventSchedulerAdd
  .text.NVIC_SetPriority
-                0x0000000008003904       0x54 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003a64       0x54 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
  .text.SysTick_Config
-                0x0000000008003958       0x44 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003ab8       0x44 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
  .text.TimerInit
-                0x000000000800399c       0x44 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
-                0x000000000800399c                TimerInit
+                0x0000000008003afc       0x44 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003afc                TimerInit
  .text.TimerStart
-                0x00000000080039e0       0xc4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
-                0x00000000080039e0                TimerStart
+                0x0000000008003b40       0xc4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003b40                TimerStart
  .text.TimerStop
-                0x0000000008003aa4       0x9c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
-                0x0000000008003aa4                TimerStop
+                0x0000000008003c04       0x9c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003c04                TimerStop
  .text.GetMilSecTick
-                0x0000000008003b40       0x14 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
-                0x0000000008003b40                GetMilSecTick
+                0x0000000008003ca0       0x14 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003ca0                GetMilSecTick
  .text.SysTick_Handler
-                0x0000000008003b54       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
-                0x0000000008003b54                SysTick_Handler
+                0x0000000008003cb4       0x1c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x0000000008003cb4                SysTick_Handler
  .text.OpticalSensor_Init
-                0x0000000008003b70      0x168 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000008003b70                OpticalSensor_Init
+                0x0000000008003cd0      0x168 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x0000000008003cd0                OpticalSensor_Init
  .text.OpticalSensor_MeasureUseDMAMode
-                0x0000000008003cd8       0x2c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000008003cd8                OpticalSensor_MeasureUseDMAMode
+                0x0000000008003e38       0x2c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x0000000008003e38                OpticalSensor_MeasureUseDMAMode
  .text.SamplingWhite
-                0x0000000008003d04       0x90 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000008003d04                SamplingWhite
+                0x0000000008003e64       0x90 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x0000000008003e64                SamplingWhite
  .text.SamplingBlack
-                0x0000000008003d94       0x90 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000008003d94                SamplingBlack
+                0x0000000008003ef4       0x90 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x0000000008003ef4                SamplingBlack
  .text.Calculate_AdcThreshold
-                0x0000000008003e24       0x58 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000008003e24                Calculate_AdcThreshold
- .text.__enable_irq
-                0x0000000008003e7c        0xe ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
- .text.__disable_irq
-                0x0000000008003e8a        0xe ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000008003f84       0x58 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x0000000008003f84                Calculate_AdcThreshold
  .text.Serial_Init
-                0x0000000008003e98       0x40 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
-                0x0000000008003e98                Serial_Init
+                0x0000000008003fdc       0x40 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000008003fdc                Serial_Init
  .text.UART_RegBufferRx
-                0x0000000008003ed8       0x24 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
-                0x0000000008003ed8                UART_RegBufferRx
+                0x000000000800401c       0x24 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x000000000800401c                UART_RegBufferRx
  .text.UART_Init
-                0x0000000008003efc       0xcc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
-                0x0000000008003efc                UART_Init
+                0x0000000008004040       0xcc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000008004040                UART_Init
  .text.USART1_IRQHandler
-                0x0000000008003fc8       0x54 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
-                0x0000000008003fc8                USART1_IRQHandler
+                0x000000000800410c       0x50 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x000000000800410c                USART1_IRQHandler
  .text.__enable_irq
-                0x000000000800401c        0xe ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x000000000800415c        0xe ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
  .text.__disable_irq
-                0x000000000800402a        0xe ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
- .text.bufInit  0x0000000008004038       0x36 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
-                0x0000000008004038                bufInit
+                0x000000000800416a        0xe ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+ .text.bufInit  0x0000000008004178       0x36 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x0000000008004178                bufInit
  .text.bufIsFull
-                0x000000000800406e       0x24 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
-                0x000000000800406e                bufIsFull
+                0x00000000080041ae       0x24 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x00000000080041ae                bufIsFull
  .text.bufFlush
-                0x0000000008004092       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
-                0x0000000008004092                bufFlush
+                0x00000000080041d2       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x00000000080041d2                bufFlush
  .text.bufEnDat
-                0x00000000080040c4       0xa0 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
-                0x00000000080040c4                bufEnDat
- .text.memsetl  0x0000000008004164       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
-                0x0000000008004164                memsetl
- .text.main     0x0000000008004196        0xe ./Src/main.o
-                0x0000000008004196                main
+                0x0000000008004204       0xa0 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x0000000008004204                bufEnDat
+ .text.memsetl  0x00000000080042a4       0x32 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+                0x00000000080042a4                memsetl
+ *fill*         0x00000000080042d6        0x2 
+ .text.main     0x00000000080042d8       0x34 ./Src/main.o
+                0x00000000080042d8                main
  .text.AppInitCommon
-                0x00000000080041a4       0x3c ./Src/main.o
+                0x000000000800430c       0x3c ./Src/main.o
  .text.LoadConfiguration
-                0x00000000080041e0        0xc ./Src/main.o
-                0x00000000080041e0                LoadConfiguration
+                0x0000000008004348        0xc ./Src/main.o
+                0x0000000008004348                LoadConfiguration
  .text.AppStateManager
-                0x00000000080041ec       0x50 ./Src/main.o
+                0x0000000008004354       0x50 ./Src/main.o
  .text.SetStateApp
-                0x000000000800423c       0x20 ./Src/main.o
+                0x00000000080043a4       0x20 ./Src/main.o
  .text.GetStateApp
-                0x000000000800425c       0x14 ./Src/main.o
+                0x00000000080043c4       0x14 ./Src/main.o
  .text.DeviceStateMachine
-                0x0000000008004270       0x84 ./Src/main.o
+                0x00000000080043d8       0x84 ./Src/main.o
  .text.CalculatorTime
-                0x00000000080042f4       0x32 ./Src/main.o
-                0x00000000080042f4                CalculatorTime
- *fill*         0x0000000008004326        0x2 
+                0x000000000800445c       0x32 ./Src/main.o
+                0x000000000800445c                CalculatorTime
+ *fill*         0x000000000800448e        0x2 
+ .text.Toggle_Led
+                0x0000000008004490       0x98 ./Src/main.o
+                0x0000000008004490                Toggle_Led
  .text.LineFollow_Process
-                0x0000000008004328       0x40 ./Src/main.o
+                0x0000000008004528       0x40 ./Src/main.o
  .text.Reset_Handler
-                0x0000000008004368       0x50 ./Startup/startup_stm32f103c8tx.o
-                0x0000000008004368                Reset_Handler
+                0x0000000008004568       0x50 ./Startup/startup_stm32f103c8tx.o
+                0x0000000008004568                Reset_Handler
  .text.Default_Handler
-                0x00000000080043b8        0x2 ./Startup/startup_stm32f103c8tx.o
-                0x00000000080043b8                EXTI2_IRQHandler
-                0x00000000080043b8                TIM8_TRG_COM_IRQHandler
-                0x00000000080043b8                TIM8_CC_IRQHandler
-                0x00000000080043b8                DebugMon_Handler
-                0x00000000080043b8                TIM1_CC_IRQHandler
-                0x00000000080043b8                HardFault_Handler
-                0x00000000080043b8                TIM6_IRQHandler
-                0x00000000080043b8                PVD_IRQHandler
-                0x00000000080043b8                SDIO_IRQHandler
-                0x00000000080043b8                PendSV_Handler
-                0x00000000080043b8                NMI_Handler
-                0x00000000080043b8                USB_HP_CAN_TX_IRQHandler
-                0x00000000080043b8                EXTI0_IRQHandler
-                0x00000000080043b8                I2C2_EV_IRQHandler
-                0x00000000080043b8                UsageFault_Handler
-                0x00000000080043b8                ADC1_2_IRQHandler
-                0x00000000080043b8                SPI1_IRQHandler
-                0x00000000080043b8                CAN_SCE_IRQHandler
-                0x00000000080043b8                TAMPER_IRQHandler
-                0x00000000080043b8                TIM8_UP_IRQHandler
-                0x00000000080043b8                DMA2_Channel2_IRQHandler
-                0x00000000080043b8                DMA1_Channel4_IRQHandler
-                0x00000000080043b8                USART3_IRQHandler
-                0x00000000080043b8                RTC_IRQHandler
-                0x00000000080043b8                DMA1_Channel7_IRQHandler
-                0x00000000080043b8                UART5_IRQHandler
-                0x00000000080043b8                ADC3_IRQHandler
-                0x00000000080043b8                TIM4_IRQHandler
-                0x00000000080043b8                CAN_RX1_IRQHandler
-                0x00000000080043b8                DMA2_Channel1_IRQHandler
-                0x00000000080043b8                I2C1_EV_IRQHandler
-                0x00000000080043b8                DMA1_Channel6_IRQHandler
-                0x00000000080043b8                UART4_IRQHandler
-                0x00000000080043b8                TIM3_IRQHandler
-                0x00000000080043b8                RCC_IRQHandler
-                0x00000000080043b8                TIM1_TRG_COM_IRQHandler
-                0x00000000080043b8                DMA1_Channel1_IRQHandler
-                0x00000000080043b8                Default_Handler
-                0x00000000080043b8                EXTI15_10_IRQHandler
-                0x00000000080043b8                TIM7_IRQHandler
-                0x00000000080043b8                TIM5_IRQHandler
-                0x00000000080043b8                SPI2_IRQHandler
-                0x00000000080043b8                USB_LP_CAN_RX0_IRQHandler
-                0x00000000080043b8                MemManage_Handler
-                0x00000000080043b8                SVC_Handler
-                0x00000000080043b8                DMA1_Channel5_IRQHandler
-                0x00000000080043b8                EXTI4_IRQHandler
-                0x00000000080043b8                DMA1_Channel3_IRQHandler
-                0x00000000080043b8                FSMC_IRQHandler
-                0x00000000080043b8                TIM1_UP_IRQHandler
-                0x00000000080043b8                WWDG_IRQHandler
-                0x00000000080043b8                TIM2_IRQHandler
-                0x00000000080043b8                TIM1_BRK_IRQHandler
-                0x00000000080043b8                EXTI1_IRQHandler
-                0x00000000080043b8                RTCAlarm_IRQHandler
-                0x00000000080043b8                DMA2_Channel4_5_IRQHandler
-                0x00000000080043b8                USART2_IRQHandler
-                0x00000000080043b8                I2C2_ER_IRQHandler
-                0x00000000080043b8                DMA1_Channel2_IRQHandler
-                0x00000000080043b8                TIM8_BRK_IRQHandler
-                0x00000000080043b8                FLASH_IRQHandler
-                0x00000000080043b8                BusFault_Handler
-                0x00000000080043b8                SPI3_IRQHandler
-                0x00000000080043b8                I2C1_ER_IRQHandler
-                0x00000000080043b8                DMA2_Channel3_IRQHandler
- *fill*         0x00000000080043ba        0x2 
- .text.__errno  0x00000000080043bc        0xc D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
-                0x00000000080043bc                __errno
+                0x00000000080045b8        0x2 ./Startup/startup_stm32f103c8tx.o
+                0x00000000080045b8                EXTI2_IRQHandler
+                0x00000000080045b8                TIM8_TRG_COM_IRQHandler
+                0x00000000080045b8                TIM8_CC_IRQHandler
+                0x00000000080045b8                DebugMon_Handler
+                0x00000000080045b8                TIM1_CC_IRQHandler
+                0x00000000080045b8                HardFault_Handler
+                0x00000000080045b8                TIM6_IRQHandler
+                0x00000000080045b8                PVD_IRQHandler
+                0x00000000080045b8                SDIO_IRQHandler
+                0x00000000080045b8                PendSV_Handler
+                0x00000000080045b8                NMI_Handler
+                0x00000000080045b8                USB_HP_CAN_TX_IRQHandler
+                0x00000000080045b8                EXTI0_IRQHandler
+                0x00000000080045b8                I2C2_EV_IRQHandler
+                0x00000000080045b8                UsageFault_Handler
+                0x00000000080045b8                ADC1_2_IRQHandler
+                0x00000000080045b8                SPI1_IRQHandler
+                0x00000000080045b8                CAN_SCE_IRQHandler
+                0x00000000080045b8                TAMPER_IRQHandler
+                0x00000000080045b8                TIM8_UP_IRQHandler
+                0x00000000080045b8                DMA2_Channel2_IRQHandler
+                0x00000000080045b8                DMA1_Channel4_IRQHandler
+                0x00000000080045b8                USART3_IRQHandler
+                0x00000000080045b8                RTC_IRQHandler
+                0x00000000080045b8                DMA1_Channel7_IRQHandler
+                0x00000000080045b8                UART5_IRQHandler
+                0x00000000080045b8                ADC3_IRQHandler
+                0x00000000080045b8                TIM4_IRQHandler
+                0x00000000080045b8                CAN_RX1_IRQHandler
+                0x00000000080045b8                DMA2_Channel1_IRQHandler
+                0x00000000080045b8                I2C1_EV_IRQHandler
+                0x00000000080045b8                DMA1_Channel6_IRQHandler
+                0x00000000080045b8                UART4_IRQHandler
+                0x00000000080045b8                TIM3_IRQHandler
+                0x00000000080045b8                RCC_IRQHandler
+                0x00000000080045b8                TIM1_TRG_COM_IRQHandler
+                0x00000000080045b8                DMA1_Channel1_IRQHandler
+                0x00000000080045b8                Default_Handler
+                0x00000000080045b8                EXTI15_10_IRQHandler
+                0x00000000080045b8                TIM7_IRQHandler
+                0x00000000080045b8                TIM5_IRQHandler
+                0x00000000080045b8                SPI2_IRQHandler
+                0x00000000080045b8                USB_LP_CAN_RX0_IRQHandler
+                0x00000000080045b8                MemManage_Handler
+                0x00000000080045b8                SVC_Handler
+                0x00000000080045b8                DMA1_Channel5_IRQHandler
+                0x00000000080045b8                EXTI4_IRQHandler
+                0x00000000080045b8                DMA1_Channel3_IRQHandler
+                0x00000000080045b8                FSMC_IRQHandler
+                0x00000000080045b8                TIM1_UP_IRQHandler
+                0x00000000080045b8                WWDG_IRQHandler
+                0x00000000080045b8                TIM2_IRQHandler
+                0x00000000080045b8                TIM1_BRK_IRQHandler
+                0x00000000080045b8                EXTI1_IRQHandler
+                0x00000000080045b8                RTCAlarm_IRQHandler
+                0x00000000080045b8                DMA2_Channel4_5_IRQHandler
+                0x00000000080045b8                USART2_IRQHandler
+                0x00000000080045b8                I2C2_ER_IRQHandler
+                0x00000000080045b8                DMA1_Channel2_IRQHandler
+                0x00000000080045b8                TIM8_BRK_IRQHandler
+                0x00000000080045b8                FLASH_IRQHandler
+                0x00000000080045b8                BusFault_Handler
+                0x00000000080045b8                SPI3_IRQHandler
+                0x00000000080045b8                I2C1_ER_IRQHandler
+                0x00000000080045b8                DMA2_Channel3_IRQHandler
+ *fill*         0x00000000080045ba        0x2 
+ .text.__errno  0x00000000080045bc        0xc D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+                0x00000000080045bc                __errno
  .text.__libc_init_array
-                0x00000000080043c8       0x48 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
-                0x00000000080043c8                __libc_init_array
- .text.pow      0x0000000008004410       0xd0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-w_pow.o)
-                0x0000000008004410                pow
- .text.finite   0x00000000080044e0        0xc D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_finite.o)
-                0x00000000080044e0                finite
- *fill*         0x00000000080044ec        0x4 
+                0x00000000080045c8       0x48 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+                0x00000000080045c8                __libc_init_array
+ .text.pow      0x0000000008004610       0xd0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-w_pow.o)
+                0x0000000008004610                pow
+ .text.finite   0x00000000080046e0        0xc D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_finite.o)
+                0x00000000080046e0                finite
+ *fill*         0x00000000080046ec        0x4 
  .text.__ieee754_pow
-                0x00000000080044f0      0xa2c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
-                0x00000000080044f0                __ieee754_pow
- .text.fabs     0x0000000008004f1c        0x8 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_fabs.o)
-                0x0000000008004f1c                fabs
- *fill*         0x0000000008004f24        0x4 
- .text.scalbn   0x0000000008004f28       0xf4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_scalbn.o)
-                0x0000000008004f28                scalbn
+                0x00000000080046f0      0xa2c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
+                0x00000000080046f0                __ieee754_pow
+ .text.fabs     0x000000000800511c        0x8 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_fabs.o)
+                0x000000000800511c                fabs
+ *fill*         0x0000000008005124        0x4 
+ .text.scalbn   0x0000000008005128       0xf4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_scalbn.o)
+                0x0000000008005128                scalbn
  .text.with_errno
-                0x000000000800501c       0x14 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
- .text.xflow    0x0000000008005030       0x30 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
+                0x000000000800521c       0x14 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
+ .text.xflow    0x0000000008005230       0x30 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
  .text.__math_uflow
-                0x0000000008005060        0xa D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
-                0x0000000008005060                __math_uflow
+                0x0000000008005260        0xa D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
+                0x0000000008005260                __math_uflow
  .text.__math_oflow
-                0x000000000800506a        0xa D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
-                0x000000000800506a                __math_oflow
+                0x000000000800526a        0xa D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
+                0x000000000800526a                __math_oflow
  .text.__ieee754_sqrt
-                0x0000000008005074      0x1b0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_sqrt.o)
-                0x0000000008005074                __ieee754_sqrt
+                0x0000000008005274      0x1b0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_sqrt.o)
+                0x0000000008005274                __ieee754_sqrt
  *(.glue_7)
- .glue_7        0x0000000008005224        0x0 linker stubs
+ .glue_7        0x0000000008005424        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008005224        0x0 linker stubs
+ .glue_7t       0x0000000008005424        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008005224        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008005424        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008005224        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008005224                _init
- .init          0x0000000008005228        0x8 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x0000000008005424        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008005424                _init
+ .init          0x0000000008005428        0x8 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008005230        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008005230                _fini
- .fini          0x0000000008005234        0x8 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
-                0x000000000800523c                . = ALIGN (0x4)
-                0x000000000800523c                _etext = .
+ .fini          0x0000000008005430        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008005430                _fini
+ .fini          0x0000000008005434        0x8 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
+                0x000000000800543c                . = ALIGN (0x4)
+                0x000000000800543c                _etext = .
 
-.vfp11_veneer   0x000000000800523c        0x0
- .vfp11_veneer  0x000000000800523c        0x0 linker stubs
+.vfp11_veneer   0x000000000800543c        0x0
+ .vfp11_veneer  0x000000000800543c        0x0 linker stubs
 
-.v4_bx          0x000000000800523c        0x0
- .v4_bx         0x000000000800523c        0x0 linker stubs
+.v4_bx          0x000000000800543c        0x0
+ .v4_bx         0x000000000800543c        0x0 linker stubs
 
-.iplt           0x000000000800523c        0x0
- .iplt          0x000000000800523c        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x000000000800543c        0x0
+ .iplt          0x000000000800543c        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x0000000008005240       0x48
-                0x0000000008005240                . = ALIGN (0x4)
+.rodata         0x0000000008005440       0x48
+                0x0000000008005440                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008005240        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
- *fill*         0x0000000008005241        0x3 
- .rodata        0x0000000008005244        0xf ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+ .rodata        0x0000000008005440        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
+ *fill*         0x0000000008005441        0x3 
+ .rodata        0x0000000008005444        0xf ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
  *(.rodata*)
- *fill*         0x0000000008005253        0x5 
- .rodata.bp     0x0000000008005258       0x10 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
- .rodata.dp_h   0x0000000008005268       0x10 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
- .rodata.dp_l   0x0000000008005278       0x10 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
-                0x0000000008005288                . = ALIGN (0x4)
+ *fill*         0x0000000008005453        0x5 
+ .rodata.bp     0x0000000008005458       0x10 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
+ .rodata.dp_h   0x0000000008005468       0x10 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
+ .rodata.dp_l   0x0000000008005478       0x10 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
+                0x0000000008005488                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008005288        0x0
- .rel.iplt      0x0000000008005288        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008005488        0x0
+ .rel.iplt      0x0000000008005488        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.ARM.extab      0x0000000008005288        0x0
-                0x0000000008005288                . = ALIGN (0x4)
+.ARM.extab      0x0000000008005488        0x0
+                0x0000000008005488                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008005288                . = ALIGN (0x4)
+                0x0000000008005488                . = ALIGN (0x4)
 
-.ARM            0x0000000008005288        0x0
-                0x0000000008005288                . = ALIGN (0x4)
-                0x0000000008005288                __exidx_start = .
+.ARM            0x0000000008005488        0x0
+                0x0000000008005488                . = ALIGN (0x4)
+                0x0000000008005488                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008005288                __exidx_end = .
-                0x0000000008005288                . = ALIGN (0x4)
+                0x0000000008005488                __exidx_end = .
+                0x0000000008005488                . = ALIGN (0x4)
 
-.preinit_array  0x0000000008005288        0x0
-                0x0000000008005288                . = ALIGN (0x4)
-                0x0000000008005288                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008005488        0x0
+                0x0000000008005488                . = ALIGN (0x4)
+                0x0000000008005488                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008005288                PROVIDE (__preinit_array_end = .)
-                0x0000000008005288                . = ALIGN (0x4)
+                0x0000000008005488                PROVIDE (__preinit_array_end = .)
+                0x0000000008005488                . = ALIGN (0x4)
 
-.init_array     0x0000000008005288        0x4
-                0x0000000008005288                . = ALIGN (0x4)
-                0x0000000008005288                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008005488        0x4
+                0x0000000008005488                . = ALIGN (0x4)
+                0x0000000008005488                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008005288        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x000000000800528c                PROVIDE (__init_array_end = .)
-                0x000000000800528c                . = ALIGN (0x4)
+ .init_array    0x0000000008005488        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x000000000800548c                PROVIDE (__init_array_end = .)
+                0x000000000800548c                . = ALIGN (0x4)
 
-.fini_array     0x000000000800528c        0x4
-                0x000000000800528c                . = ALIGN (0x4)
+.fini_array     0x000000000800548c        0x4
+                0x000000000800548c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000800528c        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x000000000800548c        0x4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008005290                . = ALIGN (0x4)
-                0x0000000008005290                _sidata = LOADADDR (.data)
+                0x0000000008005490                . = ALIGN (0x4)
+                0x0000000008005490                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0xd0 load address 0x0000000008005290
+.data           0x0000000020000000       0xd0 load address 0x0000000008005490
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3953,7 +3951,9 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .data.statePID
                 0x000000002000006c        0x1 ./Src/main.o
                 0x000000002000006c                statePID
- *fill*         0x000000002000006d        0x3 
+ .data.ledBuff  0x000000002000006d        0x1 ./Src/main.o
+                0x000000002000006d                ledBuff
+ *fill*         0x000000002000006e        0x2 
  .data._impure_data
                 0x0000000020000070       0x4c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-impure.o)
                 0x0000000020000070                _impure_data
@@ -3967,11 +3967,11 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
                 0x00000000200000d0                . = ALIGN (0x4)
                 0x00000000200000d0                _edata = .
 
-.igot.plt       0x00000000200000d0        0x0 load address 0x0000000008005360
+.igot.plt       0x00000000200000d0        0x0 load address 0x0000000008005560
  .igot.plt      0x00000000200000d0        0x0 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x00000000200000d0                . = ALIGN (0x4)
 
-.bss            0x00000000200000d0      0x5e0 load address 0x0000000008005360
+.bss            0x00000000200000d0      0x5f0 load address 0x0000000008005560
                 0x00000000200000d0                _sbss = .
                 0x00000000200000d0                __bss_start__ = _sbss
  *(.bss)
@@ -3982,13 +3982,14 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
                 0x000000002000013c       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
  .bss.bBuzzInit
                 0x000000002000014c        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
+ .bss.g_brightnessLed
+                0x000000002000014d        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .bss.EncoderM1_Val
-                0x000000002000014d        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
-                0x000000002000014d                EncoderM1_Val
- .bss.EncoderM2_Val
                 0x000000002000014e        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
-                0x000000002000014e                EncoderM2_Val
- *fill*         0x000000002000014f        0x1 
+                0x000000002000014e                EncoderM1_Val
+ .bss.EncoderM2_Val
+                0x000000002000014f        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+                0x000000002000014f                EncoderM2_Val
  .bss.encoderM1_temp
                 0x0000000020000150        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
                 0x0000000020000150                encoderM1_temp
@@ -4037,60 +4038,72 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .bss.lastCheckInline
                 0x0000000020000198        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
                 0x0000000020000198                lastCheckInline
- .bss.count     0x000000002000019c        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
-                0x000000002000019c                count
+ .bss.lastCheckInline2
+                0x000000002000019c        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x000000002000019c                lastCheckInline2
+ .bss.lastCheckInline3
+                0x00000000200001a0        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x00000000200001a0                lastCheckInline3
+ .bss.count     0x00000000200001a4        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                0x00000000200001a4                count
  .bss.pAppStateFunc
-                0x00000000200001a0        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+                0x00000000200001a8        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
  .bss.pBuffEvent
-                0x00000000200001a4      0x100 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+                0x00000000200001ac      0x100 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
  .bss.eventQueue
-                0x00000000200002a4       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+                0x00000000200002ac       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
  .bss.g_pTimerHandle
-                0x00000000200002b4      0x180 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x00000000200002bc      0x180 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
  .bss.g_wMilSecTickTimer
-                0x0000000020000434        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+                0x000000002000043c        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
  .bss.ADCConvertedValue
-                0x0000000020000438        0xa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
- *fill*         0x0000000020000442        0x2 
+                0x0000000020000440        0xa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+ *fill*         0x000000002000044a        0x2 
  .bss.AdcValues_White
-                0x0000000020000444        0xa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000020000444                AdcValues_White
- *fill*         0x000000002000044e        0x2 
+                0x000000002000044c        0xa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x000000002000044c                AdcValues_White
+ *fill*         0x0000000020000456        0x2 
  .bss.AdcValues_Black
-                0x0000000020000450        0xa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
-                0x0000000020000450                AdcValues_Black
+                0x0000000020000458        0xa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+                0x0000000020000458                AdcValues_Black
  .bss.byRxBufState
-                0x000000002000045a        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
- *fill*         0x000000002000045b        0x1 
+                0x0000000020000462        0x1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+ *fill*         0x0000000020000463        0x1 
+ .bss.byReceiverData
+                0x0000000020000464        0x2 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000020000464                byReceiverData
+ *fill*         0x0000000020000466        0x2 
  .bss.serialQueueRx
-                0x000000002000045c       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000020000468       0x10 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
  .bss.pBuffDataRx
-                0x000000002000046c      0x100 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000020000478      0x100 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
  .bss.g_pUartQueueRx
-                0x000000002000056c        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000020000578        0x4 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
  .bss.eCurrentState
-                0x0000000020000570        0x1 ./Src/main.o
- *fill*         0x0000000020000571        0x3 
+                0x000000002000057c        0x1 ./Src/main.o
+ *fill*         0x000000002000057d        0x3 
  .bss.TimeStart
-                0x0000000020000574        0x4 ./Src/main.o
-                0x0000000020000574                TimeStart
- .bss.__sf      0x0000000020000578      0x138 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
-                0x0000000020000578                __sf
+                0x0000000020000580        0x4 ./Src/main.o
+                0x0000000020000580                TimeStart
+ .bss.timebuff  0x0000000020000584        0x4 ./Src/main.o
+                0x0000000020000584                timebuff
+ .bss.__sf      0x0000000020000588      0x138 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x0000000020000588                __sf
  *(COMMON)
-                0x00000000200006b0                . = ALIGN (0x4)
-                0x00000000200006b0                _ebss = .
-                0x00000000200006b0                __bss_end__ = _ebss
+                0x00000000200006c0                . = ALIGN (0x4)
+                0x00000000200006c0                _ebss = .
+                0x00000000200006c0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200006b0      0x600 load address 0x0000000008005360
-                0x00000000200006b0                . = ALIGN (0x8)
+                0x00000000200006c0      0x600 load address 0x0000000008005560
+                0x00000000200006c0                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x00000000200006b0                PROVIDE (_end = .)
-                0x00000000200008b0                . = (. + _Min_Heap_Size)
- *fill*         0x00000000200006b0      0x200 
-                0x0000000020000cb0                . = (. + _Min_Stack_Size)
- *fill*         0x00000000200008b0      0x400 
-                0x0000000020000cb0                . = ALIGN (0x8)
+                0x00000000200006c0                PROVIDE (_end = .)
+                0x00000000200008c0                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200006c0      0x200 
+                0x0000000020000cc0                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200008c0      0x400 
+                0x0000000020000cc0                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -4227,7 +4240,7 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .comment       0x0000000000000043       0x44 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
  .comment       0x0000000000000043       0x44 ./Src/main.o
 
-.debug_info     0x0000000000000000     0xaa6c
+.debug_info     0x0000000000000000     0xaa7b
  .debug_info    0x0000000000000000      0x422 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
  .debug_info    0x0000000000000422      0x4d8 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/misc.o
  .debug_info    0x00000000000008fa      0xb42 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o
@@ -4243,17 +4256,17 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_info    0x0000000000006367      0x6fa ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
  .debug_info    0x0000000000006a61      0x7ec ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
  .debug_info    0x000000000000724d      0x7d0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
- .debug_info    0x0000000000007a1d      0x2b8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
- .debug_info    0x0000000000007cd5      0x268 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
- .debug_info    0x0000000000007f3d      0x89c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
- .debug_info    0x00000000000087d9      0x8cc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
- .debug_info    0x00000000000090a5      0xcd2 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
- .debug_info    0x0000000000009d77      0x2c6 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
- .debug_info    0x000000000000a03d      0x342 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
- .debug_info    0x000000000000a37f      0x6ca ./Src/main.o
- .debug_info    0x000000000000aa49       0x23 ./Startup/startup_stm32f103c8tx.o
+ .debug_info    0x0000000000007a1d      0x2da ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+ .debug_info    0x0000000000007cf7      0x268 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+ .debug_info    0x0000000000007f5f      0x89c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+ .debug_info    0x00000000000087fb      0x8cc ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+ .debug_info    0x00000000000090c7      0xcb1 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+ .debug_info    0x0000000000009d78      0x2c6 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+ .debug_info    0x000000000000a03e      0x342 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+ .debug_info    0x000000000000a380      0x6d8 ./Src/main.o
+ .debug_info    0x000000000000aa58       0x23 ./Startup/startup_stm32f103c8tx.o
 
-.debug_abbrev   0x0000000000000000     0x2cce
+.debug_abbrev   0x0000000000000000     0x2cad
  .debug_abbrev  0x0000000000000000      0x1b9 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
  .debug_abbrev  0x00000000000001b9      0x18e ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/misc.o
  .debug_abbrev  0x0000000000000347      0x1dc ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o
@@ -4266,20 +4279,20 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_abbrev  0x0000000000000fe5      0x27a ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
  .debug_abbrev  0x000000000000125f      0x141 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
  .debug_abbrev  0x00000000000013a0      0x205 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
- .debug_abbrev  0x00000000000015a5      0x286 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
- .debug_abbrev  0x000000000000182b      0x2c2 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
- .debug_abbrev  0x0000000000001aed      0x19f ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
- .debug_abbrev  0x0000000000001c8c      0x168 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
- .debug_abbrev  0x0000000000001df4      0x157 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
- .debug_abbrev  0x0000000000001f4b      0x2e8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
- .debug_abbrev  0x0000000000002233      0x251 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
- .debug_abbrev  0x0000000000002484      0x369 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
- .debug_abbrev  0x00000000000027ed      0x12b ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
- .debug_abbrev  0x0000000000002918      0x111 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
- .debug_abbrev  0x0000000000002a29      0x293 ./Src/main.o
- .debug_abbrev  0x0000000000002cbc       0x12 ./Startup/startup_stm32f103c8tx.o
+ .debug_abbrev  0x00000000000015a5      0x27e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+ .debug_abbrev  0x0000000000001823      0x2c2 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+ .debug_abbrev  0x0000000000001ae5      0x19f ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+ .debug_abbrev  0x0000000000001c84      0x168 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+ .debug_abbrev  0x0000000000001dec      0x157 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+ .debug_abbrev  0x0000000000001f43      0x2e8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+ .debug_abbrev  0x000000000000222b      0x251 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+ .debug_abbrev  0x000000000000247c      0x353 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+ .debug_abbrev  0x00000000000027cf      0x12b ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+ .debug_abbrev  0x00000000000028fa      0x111 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+ .debug_abbrev  0x0000000000002a0b      0x290 ./Src/main.o
+ .debug_abbrev  0x0000000000002c9b       0x12 ./Startup/startup_stm32f103c8tx.o
 
-.debug_aranges  0x0000000000000000      0xd58
+.debug_aranges  0x0000000000000000      0xd50
  .debug_aranges
                 0x0000000000000000       0x38 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
  .debug_aranges
@@ -4319,18 +4332,18 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_aranges
                 0x0000000000000b08       0x50 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
  .debug_aranges
-                0x0000000000000b58       0x98 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x0000000000000b58       0x88 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
  .debug_aranges
-                0x0000000000000bf0       0x60 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x0000000000000be0       0x60 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
  .debug_aranges
-                0x0000000000000c50       0x58 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+                0x0000000000000c40       0x58 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
  .debug_aranges
-                0x0000000000000ca8       0x88 ./Src/main.o
+                0x0000000000000c98       0x90 ./Src/main.o
  .debug_aranges
-                0x0000000000000d30       0x28 ./Startup/startup_stm32f103c8tx.o
+                0x0000000000000d28       0x28 ./Startup/startup_stm32f103c8tx.o
 
 .debug_rnglists
-                0x0000000000000000      0x9ce
+                0x0000000000000000      0x9c9
  .debug_rnglists
                 0x0000000000000000       0x27 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
  .debug_rnglists
@@ -4370,15 +4383,15 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_rnglists
                 0x0000000000000822       0x3b ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
  .debug_rnglists
-                0x000000000000085d       0x71 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                0x000000000000085d       0x65 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
  .debug_rnglists
-                0x00000000000008ce       0x45 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+                0x00000000000008c2       0x45 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
  .debug_rnglists
-                0x0000000000000913       0x3f ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+                0x0000000000000907       0x3f ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
  .debug_rnglists
-                0x0000000000000952       0x63 ./Src/main.o
+                0x0000000000000946       0x6a ./Src/main.o
  .debug_rnglists
-                0x00000000000009b5       0x19 ./Startup/startup_stm32f103c8tx.o
+                0x00000000000009b0       0x19 ./Startup/startup_stm32f103c8tx.o
 
 .debug_macro    0x0000000000000000     0xe263
  .debug_macro   0x0000000000000000       0x97 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
@@ -4470,7 +4483,7 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_macro   0x000000000000e22b       0x28 ./Src/main.o
  .debug_macro   0x000000000000e253       0x10 ./Src/main.o
 
-.debug_line     0x0000000000000000     0xc94d
+.debug_line     0x0000000000000000     0xc988
  .debug_line    0x0000000000000000      0x652 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
  .debug_line    0x0000000000000652      0x638 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/misc.o
  .debug_line    0x0000000000000c8a      0xbc9 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o
@@ -4483,20 +4496,20 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_line    0x0000000000005ad8      0x8af ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/button.o
  .debug_line    0x0000000000006387      0x632 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/button/eventbutton.o
  .debug_line    0x00000000000069b9      0x7c0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
- .debug_line    0x0000000000007179      0x840 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
- .debug_line    0x00000000000079b9      0x8ad ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
- .debug_line    0x0000000000008266      0x641 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
- .debug_line    0x00000000000088a7      0x621 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
- .debug_line    0x0000000000008ec8      0x502 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
- .debug_line    0x00000000000093ca      0x862 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
- .debug_line    0x0000000000009c2c      0x83e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
- .debug_line    0x000000000000a46a      0xb89 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
- .debug_line    0x000000000000aff3      0x6fb ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
- .debug_line    0x000000000000b6ee      0x672 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
- .debug_line    0x000000000000bd60      0xb72 ./Src/main.o
- .debug_line    0x000000000000c8d2       0x7b ./Startup/startup_stm32f103c8tx.o
+ .debug_line    0x0000000000007179      0x84d ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+ .debug_line    0x00000000000079c6      0x8ad ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+ .debug_line    0x0000000000008273      0x641 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+ .debug_line    0x00000000000088b4      0x651 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+ .debug_line    0x0000000000008f05      0x502 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+ .debug_line    0x0000000000009407      0x862 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+ .debug_line    0x0000000000009c69      0x83e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+ .debug_line    0x000000000000a4a7      0xb37 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+ .debug_line    0x000000000000afde      0x6fb ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+ .debug_line    0x000000000000b6d9      0x672 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+ .debug_line    0x000000000000bd4b      0xbc2 ./Src/main.o
+ .debug_line    0x000000000000c90d       0x7b ./Startup/startup_stm32f103c8tx.o
 
-.debug_str      0x0000000000000000    0x4be33
+.debug_str      0x0000000000000000    0x4be63
  .debug_str     0x0000000000000000    0x32496 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
                                       0x32629 (size before relaxing)
  .debug_str     0x0000000000032496      0x706 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/misc.o
@@ -4521,32 +4534,32 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
                                        0x4f89 (size before relaxing)
  .debug_str     0x0000000000045c59      0x2e2 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/buzzer/buzzer.o
                                       0x3b40b (size before relaxing)
- .debug_str     0x0000000000045f3b      0x453 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
-                                      0x3b2f3 (size before relaxing)
- .debug_str     0x000000000004638e     0x488a ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
+ .debug_str     0x0000000000045f3b      0x462 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/led/led.o
+                                      0x3b302 (size before relaxing)
+ .debug_str     0x000000000004639d     0x488a ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/encoder.o
                                       0x3b748 (size before relaxing)
- .debug_str     0x000000000004ac18      0x1a0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
+ .debug_str     0x000000000004ac27      0x1a0 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/motor.o
                                       0x3b0a4 (size before relaxing)
- .debug_str     0x000000000004adb8      0x27c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
-                                       0x4123 (size before relaxing)
- .debug_str     0x000000000004b034      0x190 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
+ .debug_str     0x000000000004adc7      0x29e ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/motor/pid.o
+                                       0x4145 (size before relaxing)
+ .debug_str     0x000000000004b065      0x190 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
                                        0x3ebc (size before relaxing)
- .debug_str     0x000000000004b1c4      0x1f5 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
+ .debug_str     0x000000000004b1f5      0x1f5 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
                                       0x349f9 (size before relaxing)
- .debug_str     0x000000000004b3b9      0x18a ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
+ .debug_str     0x000000000004b3ea      0x18a ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
                                       0x3b02d (size before relaxing)
- .debug_str     0x000000000004b543      0x526 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
-                                      0x3c48e (size before relaxing)
- .debug_str     0x000000000004ba69       0x9a ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+ .debug_str     0x000000000004b574      0x526 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+                                      0x3c473 (size before relaxing)
+ .debug_str     0x000000000004ba9a       0x9a ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
                                       0x325e2 (size before relaxing)
- .debug_str     0x000000000004bb03      0x117 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+ .debug_str     0x000000000004bb34      0x117 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
                                        0x3e4a (size before relaxing)
- .debug_str     0x000000000004bc1a      0x1ea ./Src/main.o
-                                      0x3972c (size before relaxing)
- .debug_str     0x000000000004be04       0x2f ./Startup/startup_stm32f103c8tx.o
+ .debug_str     0x000000000004bc4b      0x1e9 ./Src/main.o
+                                      0x39758 (size before relaxing)
+ .debug_str     0x000000000004be34       0x2f ./Startup/startup_stm32f103c8tx.o
                                          0x56 (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x3d14
+.debug_frame    0x0000000000000000     0x3cf0
  .debug_frame   0x0000000000000000       0x98 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/CMSIS/Source/system_stm32f10x.o
  .debug_frame   0x0000000000000098       0xd8 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/misc.o
  .debug_frame   0x0000000000000170      0x5a4 ./SDK_ROBI_STM32F1_1.0.0/shared/Drivers/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o
@@ -4566,29 +4579,29 @@ LOAD D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.m
  .debug_frame   0x0000000000002be4       0x7c ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/eventman.o
  .debug_frame   0x0000000000002c60      0x1e8 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/rtos/timer.o
  .debug_frame   0x0000000000002e48      0x114 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/sensor/optical_sensor.o
- .debug_frame   0x0000000000002f5c      0x260 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
- .debug_frame   0x00000000000031bc      0x158 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
- .debug_frame   0x0000000000003314      0x14c ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
- .debug_frame   0x0000000000003460      0x1f4 ./Src/main.o
- .debug_frame   0x0000000000003654      0x144 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
- .debug_frame   0x0000000000003798       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
- .debug_frame   0x00000000000037b8       0x2c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
- .debug_frame   0x00000000000037e4       0x34 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-w_pow.o)
- .debug_frame   0x0000000000003818       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_finite.o)
- .debug_frame   0x0000000000003838       0x78 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
- .debug_frame   0x00000000000038b0       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_fabs.o)
- .debug_frame   0x00000000000038d0       0x30 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_scalbn.o)
- .debug_frame   0x0000000000003900      0x120 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
- .debug_frame   0x0000000000003a20       0x38 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_sqrt.o)
- .debug_frame   0x0000000000003a58       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
- .debug_frame   0x0000000000003a7c       0xac D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x0000000000003b28       0x50 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x0000000000003b78       0xc4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000000000003c3c       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x0000000000003c5c       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x0000000000003c80       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x0000000000003ca4       0x4c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x0000000000003cf0       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_fixsfsi.o)
+ .debug_frame   0x0000000000002f5c      0x220 ./SDK_ROBI_STM32F1_1.0.0/shared/Middle/serial/serial.o
+ .debug_frame   0x000000000000317c      0x158 ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/buff.o
+ .debug_frame   0x00000000000032d4      0x14c ./SDK_ROBI_STM32F1_1.0.0/shared/Utilities/utilities.o
+ .debug_frame   0x0000000000003420      0x210 ./Src/main.o
+ .debug_frame   0x0000000000003630      0x144 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+ .debug_frame   0x0000000000003774       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-errno.o)
+ .debug_frame   0x0000000000003794       0x2c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
+ .debug_frame   0x00000000000037c0       0x34 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-w_pow.o)
+ .debug_frame   0x00000000000037f4       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_finite.o)
+ .debug_frame   0x0000000000003814       0x78 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_pow.o)
+ .debug_frame   0x000000000000388c       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_fabs.o)
+ .debug_frame   0x00000000000038ac       0x30 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-s_scalbn.o)
+ .debug_frame   0x00000000000038dc      0x120 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-math_err.o)
+ .debug_frame   0x00000000000039fc       0x38 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a(libm_a-e_sqrt.o)
+ .debug_frame   0x0000000000003a34       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .debug_frame   0x0000000000003a58       0xac D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000003b04       0x50 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000003b54       0xc4 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000000000003c18       0x20 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x0000000000003c38       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000003c5c       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x0000000000003c80       0x4c D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000000000003ccc       0x24 D:/DH/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp\libgcc.a(_arm_fixsfsi.o)
 
 .debug_line_str
                 0x0000000000000000       0x4a
